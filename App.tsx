@@ -1,12 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import NameList from './components/NameList'
+import SqliteTestComponent from './components/SqliteTestComponent';
+
+import * as SQLite from 'expo-sqlite';
+//(window as any).Expo = Object.freeze({ ...(window as any).Expo, SQLite });
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <NameList/>
+      <SqliteTestComponent/>
       <StatusBar style="auto" />
     </View>
   );
